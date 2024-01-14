@@ -21,7 +21,7 @@ Future<void> main() async {
   int c = degree.toInt();
   int f = degree2.toInt();
 
-  log('$c');
+  //log('$c');
   HomeWidget.saveWidgetData(
     'weather_degree',
     c, //'${degree}°C',
@@ -189,17 +189,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
           children: <Widget>[
             const Text(
               'Minneapolis Weather:',
-            ),
-            FutureBuilder<int>(
-              future: _value,
-              builder: (_, snapshot) => Column(
-                children: [
-                  Text(
-                    (snapshot.data ?? 0).toString() + ' count',
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                ],
-              ),
             ),
             FutureBuilder<int>(
               future: _valueC,

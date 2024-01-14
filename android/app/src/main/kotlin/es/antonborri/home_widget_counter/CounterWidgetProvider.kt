@@ -18,7 +18,6 @@ class CounterWidgetProvider : HomeWidgetProvider() {
             widgetData: SharedPreferences) {
         appWidgetIds.forEach { widgetId ->
             val views = RemoteViews(context.packageName, R.layout.counter_widget  ).apply {
-                val count = widgetData.getInt("counter", 0)
                 val f = widgetData.getInt("x", 0)
                 val c = widgetData.getInt("weather_degree", 0)
 
